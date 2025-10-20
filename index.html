@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Serif:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <title>Resto chez John</title>
+</head>
+
+<body>
+  <header class="header">
+
+    <a href="#">
+      <img class="logoim" loading="lazy" src="img/logoJohn.webp" alt="Logo">
+    </a>
+
+    <input type="checkbox" class="nav-toggle" id="nav-toggle">
+
+    <label for="nav-toggle" class="nav-icon">
+      <span class="nav-icon-line"></span>
+    </label>
+
+    <nav class="nav-header">
+      <ul class="nav-links">
+        <li><a class="list" href="#">Accueil</a></li>
+        <li><a class="list" href="#section-repas">Nos menus</a></li>
+        <li><a class="list" href="#footer">Contacts</a></li>
+        <li>
+          <a class="list command-bouton" href="#nos-formules">Commander</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <section class="main-hero-section">
+      <div class="hero-section">
+        <div class="hero-texte">
+          <h1 class="hero-titre">
+            Savourez l’excellence, sans bouger de chez vous
+          </h1>
+          <p class="hero-paragraphe">
+            Chaque jour, nous imaginons pour vous des repas sains, savoureux
+            et variés, pensés pour respecter vos goûts, vos habitudes et vos
+            objectifs.
+          </p>
+          <a href="#" class="hero-bouton">Nos menus</a>
+          <a href="#" class="hero-bouton second-bouton">Plus d'infos &darr;</a>
+          <div class="livraison-section">
+            <div class="livraisons">
+              <img src="img/customers/cust1.webp" loading="lazy" class="img-del" alt="Customer 1">
+              <img src="img/customers/cust2.webp" loading="lazy" class="img-del" alt="Customer 2">
+              <img src="img/customers/cust3.webp" loading="lazy" class="img-del" alt="Customer 3">
+              <img src="img/customers/cust4.webp" loading="lazy" class="img-del" alt="Customer 4">
+              <img src="img/customers/cust5.webp" loading="lazy" class="img-del" alt="Customer 5">
+              <img src="img/customers/cust6.webp" loading="lazy" class="img-del" alt="Customer 6">
+            </div>
+
+            <p class="livraison-texte">
+              <span class="col">+ de 10 000</span> repas livrés partout à
+              Abidjan
+            </p>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="img/hero.webp" class="hero-img" alt="Hero Image">
+        </div>
+      </div>
+    </section>
+    <section class="conteneur-section">
+      <div class="conteneur">
+        <h2 class="titre-part">Nos partenaires</h2>
+      </div>
+
+      <div class="partenaires-img">
+        <img src="img/glovo.png" loading="lazy" alt="glovo" class="partenaire-img"> <img src="img/yango.png"
+          loading="lazy" alt="yango" class="partenaire-img"> <img src="img/orange.png" loading="lazy" alt="orange"
+          class="partenaire-img"> <img src="img/djamo.png" loading="lazy" alt="djamo" class="partenaire-img">
+      </div>
+    </section>
+
+    <section class="conteneur-section">
+      <div class="conteneur marge-bottom">
+        <h2 class="titre-comment">Comment ça marche</h2>
+        <span class="sous-titre">Votre service de livraison en seulement 3 étapes</span>
+      </div>
+
+      <div class="grid--2 conteneur">
+        <div class="texte-etapes">
+          <span class="numero">01</span>
+          <h3 class="sous-titre-etapes">Choisissez votre menu</h3>
+          <p class="sous-texte">
+            Nous vous proposons des plats africains, européens et
+            sud-américains 100% bio.<br><span class="petit-style">Choisissez les plats qui vous plaisent et concevez
+              vous-même
+              votre propre menu !</span>
+          </p>
+        </div>
+        <div class="img-etapes">
+          <img src="img/apps/app-screen-2.webp" loading="lazy" alt="image-app" class="apps">
+        </div>
+
+        <div class="img-etapes">
+          <img src="img/apps/app-screen-1.webp" loading="lazy" alt="image-app" class="apps">
+        </div>
+
+        <div class="texte-etapes">
+          <span class="numero">02</span>
+          <h3 class="sous-titre-etapes">Ensuite vos ingrédients</h3>
+          <p class="sous-texte">
+            Vous avez droit aux meilleurs ingrédients.<br><span class="petit-style">
+              Selectionnez ceux que vous aimez et ajoutez à votre menu !</span>
+          </p>
+        </div>
+
+        <div class="texte-etapes">
+          <span class="numero">03</span>
+          <h3 class="sous-titre-etapes">Et enfin votre dessert</h3>
+          <p class="sous-texte">
+            De mêmes que nos plats, vous disposez d'une variétés de
+            desserts.<br><span class="petit-style">Faites votre choix et ajoutez à votre menu !</span>
+          </p>
+        </div>
+        <div class="img-etapes">
+          <img src="img/apps/app-screen-3.webp" loading="lazy" alt="image-app" class="apps">
+        </div>
+      </div>
+    </section>
+    <section class="conteneur-section" id="section-repas">
+      <div class="conteneur">
+        <h2 class="titre-comment centre">Nos repas</h2>
+        <span class="sous-titre centre">Choisissez parmi une variété de plats savoureux</span>
+      </div>
+      <div class="conteneur menus">
+        <div class="menu1">
+          <img src="img/menu1.webp" loading="lazy" alt="menu1" class="img-menu">
+          <div>
+            <span class="titre-menu">Vegetarien</span>
+            <h3 class="sous-titre-menu">Salade d'avocat</h3>
+          </div>
+          <div class="info-menu">
+            <div class="sous-info-menu">
+              <ion-icon name="flame-outline" class="icones-menu"></ion-icon>
+              <span class="details">1200 calories</span>
+            </div>
+            <div class="sous-info-menu">
+              <ion-icon name="barbell-outline" class="icones-menu"></ion-icon>
+              <span class="details">Score nutritionnel ® 55</span>
+            </div>
+            <div class="sous-info-menu">
+              <ion-icon name="star-outline" class="icones-menu"></ion-icon>
+              <span class="details">6.2 avis (537)</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu2">
+          <img src="img/menu3.webp" loading="lazy" alt="menu2" class="img-menu">
+          <div>
+            <span class="titre-menu">Equilibré</span>
+            <h3 class="sous-titre-menu">Pâtes alimentaires</h3>
+          </div>
+          <div class="info-menu">
+            <div class="sous-info-menu">
+              <ion-icon name="flame-outline" class="icones-menu"></ion-icon>
+              <span class="details">650 calories</span>
+            </div>
+            <div class="sous-info-menu">
+              <ion-icon name="barbell-outline" class="icones-menu"></ion-icon>
+              <span class="details">Score nutritionnel ® 74</span>
+            </div>
+            <div class="sous-info-menu">
+              <ion-icon name="star-outline" class="icones-menu"></ion-icon>
+              <span class="details">4.9 avis (897)</span>
+            </div>
+          </div>
+        </div>
+        <div class="liste-desert">
+          <h2 class="titre-desert">Nos desserts</h2>
+
+          <ul class="deserts">
+            <li class="desert-actif">
+              <ion-icon name="checkmark-outline" class="icones-list"></ion-icon>
+              <span class="desert">Mousse au chocolat</span>
+            </li>
+            <li class="desert-actif">
+              <ion-icon name="checkmark-outline" class="icones-list"></ion-icon>
+              <span class="desert">Crème brûlée</span>
+            </li>
+            <li class="desert-actif">
+              <ion-icon name="checkmark-outline" class="icones-list"></ion-icon>
+              <span class="desert">Tarte aux pommes</span>
+            </li>
+            <li class="desert-actif">
+              <ion-icon name="checkmark-outline" class="icones-list"></ion-icon>
+              <span class="desert">Fondant au chocolat</span>
+            </li>
+            <li class="desert-actif">
+              <ion-icon name="checkmark-outline" class="icones-list"></ion-icon>
+              <span class="desert">Tarte aux pommes</span>
+            </li>
+            <li class="desert-actif">
+              <ion-icon name="checkmark-outline" class="icones-list"></ion-icon>
+              <span class="desert">Cheesecake</span>
+            </li>
+            <li class="desert-actif">
+              <ion-icon name="checkmark-outline" class="icones-list"></ion-icon>
+              <span class="desert">Tiramisu</span>
+            </li>
+            <li class="desert-actif">
+              <ion-icon name="checkmark-outline" class="icones-list"></ion-icon>
+              <span class="desert">Panna cotta</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="conteneur lien-menu">
+        <a href="#" class="plus">Voir tous nos menus&rarr;</a>
+      </div>
+    </section>
+    <section class="conteneur-section" id="nos-formules">
+      <div class="conteneur">
+        <h2 class="titre-comment">Nos formules</h2>
+        <span class="sous-titre margb">Des formules adaptées à vos besoins</span>
+        <div class="pricing">
+          <div class="les-prix starter">
+            <p class="titre-comment centre start">STARTER</p>
+            <span class="prix centre">60.000f</span>
+            <span class="details-prix centre">5000f/mois pendant 1 an !</span>
+
+            <ul class="liste-inclus">
+              <li class="flex-ligne">
+                <ion-icon name="checkmark-outline" class="icones-list icone-prix"></ion-icon>
+                <span class="det">1 repas chaque jour</span>
+              </li>
+              <li class="flex-ligne">
+                <ion-icon name="checkmark-outline" class="icones-list icone-prix"></ion-icon>
+                <span class="det">livraison 5j/7</span>
+              </li>
+              <li class="flex-ligne">
+                <ion-icon name="checkmark-outline" class="icones-list icone-prix"></ion-icon>
+                <span class="det">Desserts offerts</span>
+              </li>
+              <li class="flex-ligne">
+                <ion-icon name="close-outline" class="icones-list icone-prix"></ion-icon>
+                <span class="det"></span>
+              </li>
+            </ul>
+            <a href="#" class="bouton-prix">Choisir</a>
+          </div>
+          <div class="les-prix premium">
+            <p class="titre-comment centre start">PREMIUM</p>
+            <span class="prix centre">72.000f</span>
+            <span class="details-prix centre">6000f/mois pendant 1 an !</span>
+
+            <ul class="liste-inclus">
+              <li class="flex-ligne">
+                <ion-icon name="checkmark-outline" class="icones-list icone-prix"></ion-icon>
+                <span class="det">2 repas chaque jour</span>
+              </li>
+              <li class="flex-ligne">
+                <ion-icon name="checkmark-outline" class="icones-list icone-prix"></ion-icon>
+                <span class="det">livraison 7j/7</span>
+              </li>
+              <li class="flex-ligne">
+                <ion-icon name="checkmark-outline" class="icones-list icone-prix"></ion-icon>
+                <span class="det">Desserts offerts</span>
+              </li>
+              <li class="flex-ligne">
+                <ion-icon name="checkmark-outline" class="icones-list icone-prix"></ion-icon>
+                <span class="det">Menus personnalisés</span>
+              </li>
+            </ul>
+            <a href="#" class="bouton-prix">Choisir</a>
+          </div>
+        </div>
+        <div class="texte-bas">
+          <p class="paragraphe-bas">
+            Notre service personnalisable obéit à des normes spécifiques en
+            termes de qualité, de fraîcheur et de variété des ingrédients.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="conteneur-section marg-footer">
+      <div class="conteneur">
+        <div class="form-div">
+          <div>
+            <h2 class="commande-titre">Commencez dès maintenant !</h2>
+            <span class="commande-sous">
+              Des repas sains, savoureux et sans tracas vous attendent.
+              Commencez à bien manger aujourd’hui !
+            </span>
+
+            <form class="formulaire" method="post" name="formulaire" netlify>
+              <div class="elements-form">
+                <label for="name" class="label">Nom complet</label>
+                <input type="text" name="nom-complet" id="name" class="input" placeholder="Votre nom complet" required>
+              </div>
+              <div class="elements-form">
+                <label for="select" class="label">Choisissez votre formule</label>
+                <select id="select" required name="choix-formule">
+                  <option value="" selected disabled>
+                    Sélectionner une formule
+                  </option>
+                  <option value="starter">Starter - 60.000f</option>
+                  <option value="premium">Premium - 72.000f</option>
+                </select>
+              </div>
+              <div class="elements-form">
+                <label for="tel" class="label">Numéro de téléphone</label>
+                <input type="tel" name="numero-phone" id="tel" class="input" placeholder="Votre numéro de téléphone"
+                  pattern="[0-9]{10}" required>
+              </div>
+              <div class="elements-form">
+                <button type="submit" class="bouton-form">Souscrire</button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <img src="img/formim.webp" loading="lazy" alt="Image commande" class="img-commande">
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-section" id="footer">
+      <div class="conteneur">
+        <div class="footer-grille">
+          <div class="col-logo">
+            <a href="#">
+              <img class="logoim" src="img/logoJohn.webp" loading="lazy" alt="Nouveau-Logo"></a>
+            <ul class="social-media">
+              <li>
+                <a href="#"><ion-icon class="social-icon" name="logo-instagram"></ion-icon></a>
+              </li>
+              <li>
+                <a href="#"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a>
+              </li>
+              <li>
+                <a href="#"><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a>
+              </li>
+            </ul>
+            <p class="copyright">
+              © 2025 Resto chez John. Tous droits réservés.
+            </p>
+            <p class="copyright auteur">
+              Conception et développement par
+              <span>Kouao Moïse Johnson.</span>
+            </p>
+          </div>
+
+          <div class="col-contacts">
+            <p class="col-titre">Nous contacter</p>
+            <address class="adresse">
+              <p class="adresse-p">01 BP 1234 Abidjan 01, Côte d'Ivoire</p>
+              <p>
+                <a class="ad-links" href="tel:+2250544966446">Téléphone : +225 05 44 96 64 46 </a><br>
+                <a class="ad-links" href="mailto:contact@restochezjohn.com">Email : contact@restochezjohn.com</a>
+              </p>
+            </address>
+          </div>
+          <div class="col-comptes">
+            <nav class="nav-elements">
+              <p class="col-titre">Comptes</p>
+              <ul>
+                <li><a href="#">Créer un compte</a></li>
+                <li><a href="#">iOS App</a></li>
+                <li><a href="#">Android App</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-companie">
+            <nav class="nav-elements">
+              <p class="col-titre">Compagnie</p>
+              <ul>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Carrières</a></li>
+                <li><a href="#">Partenaires</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-annexes">
+            <nav class="nav-elements">
+              <p class="col-titre">Annexes</p>
+              <ul>
+                <li><a href="#">Mentions Légales</a></li>
+                <li><a href="#">FAQ (Foire Aux Questions)</a></li>
+                <li><a href="#">Conditions Générales de Vente (CGV)</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+</body>
+
+</html>

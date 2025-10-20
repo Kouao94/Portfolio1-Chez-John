@@ -1,0 +1,1340 @@
+/* ======================================= */
+/* 00. PARAMÈTRES ET STRUCTURE DE BASE     */
+/* ======================================= */
+
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Accessibilité : Utiliser :focus-visible pour n'afficher l'outline que lors de la navigation au clavier */
+*:focus:not(:focus-visible) {
+    /* Supprime l'outline lors d'un simple clic de souris, mais la conserve pour la touche TAB */
+    outline: none;
+}
+
+*:focus-visible {
+    /* Cette règle s'applique uniquement lorsque la focalisation est visible (navigation au clavier) */
+    outline: 2px solid #4c0000;
+    outline-offset: 2px;
+}
+
+/* Base Responsive : 1rem = 10px via car 1rem=16px par defaut  */
+/* Dans votre section 00. PARAMÈTRES ET STRUCTURE DE BASE */
+
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Vous pouvez aussi l'ajouter à html pour être plus sûr */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* ======================================= */
+/* 01. HEADER ET NAVIGATION                */
+/* ======================================= */
+
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14rem;
+    background-color: #944d4d; /* Couleur principale */
+    padding: 3rem 5rem;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.logoim {
+    height: 9rem;
+    border-radius: 11px;
+    transition: all 0.5s;
+}
+
+.logoim:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 3.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+/* Styles des liens de navigation (sans le bouton commander) */
+.list {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.9rem;
+    transition: all 0.3s;
+}
+
+.list:hover,
+.list:active {
+    color: #ffffff;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+/* BOUTON COMMANDER : Styles de base regroupés */
+.command-bouton {
+    font-size: 2rem;
+    padding: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: all 0.3s;
+}
+
+.command-bouton:link,
+.command-bouton:visited {
+    background-color: black;
+    color: #ffffff;
+}
+
+.command-bouton:hover,
+.command-bouton:active {
+    font-weight: 800;
+}
+
+/* ======================================= */
+/* 02. SECTIONS RÉUTILISABLES ET STRUCTURE */
+/* ======================================= */
+
+.conteneur-section {
+    padding: 5rem 0;
+}
+
+.conteneur {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Style commun pour les titres (PARTENAIRES/COMMENT/FORMULES) */
+.titre-comment,
+.titre-part {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.titre-part {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: #555555; /* Gris */
+    font-weight: 500;
+}
+
+.titre-comment {
+    color: #660000; /* Rouge foncé */
+}
+
+.sous-titre {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.centre {
+    text-align: center;
+}
+
+span.centre {
+    display: block;
+}
+
+.marge-bottom {
+    margin-bottom: 10rem;
+}
+
+/* ======================================= */
+/* 03. SECTION HERO (HÉROS)                */
+/* ======================================= */
+
+.main-hero-section {
+    background-color: #ffffff;
+    padding: 5rem 0rem;
+}
+
+.hero-section {
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 140rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+}
+
+.hero-titre {
+    /* AJOUT : Style par défaut pour le titre du Hero */
+    font-size: 4.5rem; 
+    line-height: 1.05;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 11px;
+    transition: all 0.5s;
+}
+
+.hero-img:hover {
+    transform: scale(1.05);
+}
+
+.hero-paragraphe {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #555555; /* Gris */
+    font-weight: 500;
+    margin-bottom: 7rem;
+    margin-top: 2rem;
+}
+
+/* BOUTONS HERO : Styles de base regroupés */
+.hero-bouton {
+    margin-right: 2rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    padding: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.hero-bouton:link,
+.hero-bouton:visited {
+    background-color: #751a1a; /* Rouge foncé */
+    color: #ffffff;
+}
+
+.hero-bouton:hover,
+.hero-bouton:active {
+    background-color: #4c0000; /* Rouge plus foncé */
+    color: #ffffff;
+}
+
+/* BOUTON SECONDAIRE HERO (Styles spécifiques) */
+.second-bouton:link,
+.second-bouton:visited {
+    background-color: #ffffff;
+    color: #555555; /* Gris */
+    transition: all 0.5s;
+}
+
+.second-bouton:hover,
+.second-bouton:active {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* LIVRAISON / CLIENTS */
+.livraison-section {
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.livraison-texte {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #555555; /* Gris */
+}
+
+.col {
+    color: #4c0000; /* Rouge plus foncé */
+    font-weight: 900;
+}
+
+.img-del { /* Sélecteur .img-del est suffisant */
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: -1rem;
+    border: 2px solid #944d4d; /* Couleur principale */
+    transition: all 0.5s;
+}
+
+.img-del:hover {
+    transform: scale(1.2);
+}
+
+/* ======================================= */
+/* 04. SECTION PARTENAIRES                 */
+/* ======================================= */
+
+.partenaires-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.partenaire-img {
+    height: 4rem;
+    filter: brightness(0);
+    opacity: 50%;
+}
+
+/* ======================================= */
+/* 05. SECTION COMMENT ÇA MARCHE           */
+/* ======================================= */
+
+.grid--2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 20rem;
+    row-gap: 10rem;
+}
+
+.texte-etapes {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.apps {
+    width: 50%;
+}
+
+.numero {
+    display: block;
+    font-size: 10rem;
+    color: #ffffff;
+    background-color: #000000;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    width: 50rem;
+}
+
+.sous-titre-etapes {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.sous-texte {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ======================================= */
+/* 06. SECTION NOS REPAS (MENUS)           */
+/* ======================================= */
+
+.menus {
+    margin-top: 8rem;
+    display: grid;
+    column-gap: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.menu1,
+.menu2 {
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 11px;
+    transition: transform 0.5s;
+}
+
+.menu1:hover,
+.menu2:hover {
+    transform: translateY(-10px);
+}
+
+.img-menu {
+    max-width: 100%;
+    height: 30rem;
+}
+
+.titre-menu {
+    display: inline-block;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 750;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    border-radius: 11px;
+    text-transform: uppercase;
+}
+
+/* Styles spécifiques aux repas */
+.menu1 .titre-menu {
+    background-color: #51cf66; /* Vert accent */
+}
+
+.menu2 .titre-menu {
+    background-color: #cc0000; /* Rouge accent */
+}
+
+.sous-titre-menu {
+    margin-top: -0.5rem;
+    margin-left: 5rem;
+    font-size: 2rem;
+    font-weight: 750;
+}
+
+.info-menu {
+    margin-left: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sous-info-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icones-menu {
+    width: 2rem;
+    height: 2rem;
+    color: #660000; /* Rouge foncé */
+}
+
+.details {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* LISTE DES DESSERTS - CORRECTION APPLIQUÉE POUR CENTRAGE DROIT */
+.titre-desert {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #660000; /* Rouge foncé */
+    letter-spacing: 1.5px;
+}
+
+.deserts {
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 500;
+    /* CORRECTION : Centrer le bloc de liste lui-même */
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.icones-list {
+    width: 4rem;
+    height: 4rem;
+    color: #660000; /* Rouge foncé */
+}
+
+.desert-actif {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+    /* CORRECTION : Aligner les éléments à gauche dans le bloc centré */
+    justify-content: flex-start;
+}
+
+/* LIEN VERS PLUS DE MENUS */
+.lien-menu {
+    padding: 2rem 0;
+}
+
+.plus {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.plus:link,
+.plus:visited {
+    color: #660000; /* Rouge foncé */
+}
+
+.plus:hover,
+.plus:active {
+    text-decoration: none;
+    color: #660000; /* Rouge foncé */
+}
+
+/* ======================================= */
+/* 07. SECTION NOS FORMULES (PRICING)      */
+/* ======================================= */
+
+.pricing {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 5rem;
+    max-width: 75%;
+}
+
+.sous-titre.margb {
+    margin-bottom: 7rem;
+}
+
+.les-prix {
+    padding: 5rem 12rem;
+    border-radius: 11px;
+    transition: all 0.7s;
+}
+
+.les-prix .titre-comment {
+    font-size: 2rem;
+    color: black;
+}
+
+.prix {
+    display: block;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+}
+
+.details-prix {
+    display: block;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 5rem;
+}
+
+/* Listes d'inclusions (Avantages) */
+.liste-inclus {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.flex-ligne {
+    list-style: none;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.det {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.icone-prix {
+    color: #000000;
+}
+
+/* BOUTONS DES FORMULES : Styles de base regroupés */
+.bouton-prix {
+    display: block;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: all 0.3s;
+}
+
+.bouton-prix:link,
+.bouton-prix:visited {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.bouton-prix:hover,
+.bouton-prix:active {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 750;
+    text-decoration: underline;
+}
+
+/* Formules spécifiques */
+.starter {
+    border: 2px solid #c7c7c7; /* Gris clair */
+    background-color: #c7c7c7;
+}
+
+.premium {
+    border: 2px solid #944d4d; /* Couleur principale */
+    background-color: #944d4d;
+    font-weight: 700;
+}
+
+/* Effets de survol */
+.premium:hover,
+.starter:hover {
+    transform: scale(1.05);
+}
+
+/* Texte sous les formules */
+.texte-bas {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.paragraphe-bas {
+    font-size: 1.5rem;
+    color: #555555; /* Gris */
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* ======================================= */
+/* 08. SECTION COMMANDER (FORMULAIRE)      */
+/* ======================================= */
+
+.form-div {
+    border-radius: 11px;
+    overflow: hidden;
+    background-color: #944d4d; /* Couleur principale */
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 40rem;
+    box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
+}
+
+.commande-titre {
+    padding-top: 3rem;
+    padding-left: 2rem;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.commande-sous {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #000000;
+    padding-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.formulaire {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.elements-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+/* Styles pour INPUT et SELECT regroupés */
+.input,
+#select {
+    width: 80%;
+    height: 4rem;
+    border-radius: 11px;
+    padding: 1rem;
+}
+
+#select {
+    font-weight: 700;
+}
+
+.bouton-form {
+    width: 80%;
+    height: 7rem;
+    font-size: 3rem;
+    font-weight: 700;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+.bouton-form:hover {
+    transform: scale(1.1);
+}
+
+.img-commande {
+    width: 100%;
+    height: 40rem;
+}
+
+/* ======================================= */
+/* 09. FOOTER                              */
+/* ======================================= */
+
+.marg-footer {
+    margin-bottom: 10rem;
+}
+
+.footer-section {
+    border-top: 1px solid #e4e4e4;
+    padding: 10rem 0;
+}
+
+.footer-grille {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    column-gap: 5rem;
+}
+
+.social-media {
+    margin-top: 3rem;
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.social-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: #767676; /* Gris footer */
+    margin-bottom: 4rem;
+    transition: all 0.2s;
+}
+
+.social-icon:hover,
+.social-icon:active {
+    color: #000000;
+}
+
+.copyright {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    letter-spacing: 1.3px;
+    color: #767676; /* Gris footer */
+}
+
+.auteur {
+    margin-top: 1.5rem;
+}
+
+.copyright span {
+    font-weight: 700;
+}
+
+.col-titre {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+}
+
+/* ADDRESSES ET CONTACTS */
+.adresse-p {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #000000;
+}
+
+/* Liens du footer (liens de contact et de navigation) */
+.ad-links,
+.nav-elements a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: #767676; /* Gris footer */
+    transition: color 0.3s;
+}
+
+.ad-links {
+    margin-top: 0.1rem;
+}
+
+.ad-links:hover,
+.ad-links:active,
+.nav-elements a:hover,
+.nav-elements a:active {
+    color: #000000;
+}
+
+.nav-elements ul {
+    list-style: none;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*     10. MEDIA QUERIES (RESPONSIVE)      */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 1213px) {
+    /* ------------------------------------- */
+    /* 00. STRUCTURE DE BASE ET RÉUTILISABLES*/
+    /* ------------------------------------- */
+    html {
+        font-size: 58%;
+    }
+    .conteneur {
+        padding: 0 3rem;
+    }
+    .lien-menu {
+        padding: 2rem 0 2rem 0;
+    }
+
+    /* ------------------------------------- */
+    /* 01. HEADER ET NAVIGATION              */
+    /* ------------------------------------- */
+    .header {
+        padding: 3rem 3rem;
+    }
+    .nav-links {
+        gap: 2rem;
+    }
+    .command-bouton {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+
+    /* ------------------------------------- */
+    /* 03. SECTION HERO (HÉROS)              */
+    /* ------------------------------------- */
+    .hero-section {
+        gap: 5rem;
+    }
+
+    /* ------------------------------------- */
+    /* 05. SECTION COMMENT ÇA MARCHE         */
+    /* ------------------------------------- */
+    .grid--2 {
+        column-gap: 8rem;
+    }
+    .numero {
+        width: 40rem;
+        font-size: 8rem;
+    }
+
+    /* ------------------------------------- */
+    /* 07. SECTION NOS FORMULES (PRICING)    */
+    /* ------------------------------------- */
+    .pricing {
+        max-width: 90%;
+    }
+    .les-prix {
+        padding: 2rem 6rem;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    html {
+        font-size: 55%;
+    }
+    .conteneur {
+        padding: 0 4rem;
+    }
+
+    /* HERO SECTION (03.) */
+    .hero-section {
+        gap: 4rem;
+        padding: 0 4rem;
+    }
+
+    /* PARTENAIRES (04.) */
+    .partenaires-img {
+        gap: 4rem;
+    }
+
+    /* COMMENT ÇA MARCHE (05.) */
+    .grid--2 {
+        column-gap: 5rem;
+    }
+    .apps {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .numero {
+        width: 30rem;
+        font-size: 7rem;
+    }
+
+    /* NOS FORMULES (PRICING) (07.) */
+    .pricing {
+        max-width: 95%;
+    }
+    .les-prix {
+        padding: 5rem 3rem;
+    }
+
+    /* FOOTER (09.) */
+    .footer-grille {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    /* ------------------------------------- */
+    /* 03. SECTION HERO (HÉROS)              */
+    /* ------------------------------------- */
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 6rem;
+    }
+    .hero-texte {
+        text-align: center;
+    }
+    .hero-bouton {
+        margin: 0 auto 2rem auto;
+        display: inline-block;
+    }
+    .hero-texte .hero-bouton:first-of-type {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+    .livraison-section {
+        justify-content: center;
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    /* ------------------------------------- */
+    /* 00. STRUCTURE DE BASE et TYPOGRAPHIE  */
+    /* ------------------------------------- */
+    html {
+        font-size: 55%;
+    }
+    .conteneur {
+        padding: 0 4rem;
+    }
+
+    /* ------------------------------------- */
+    /* 01. HEADER ET NAVIGATION (Hamburger)  */
+    /* ------------------------------------- */
+    .header {
+        height: 8rem;
+        position: relative;
+        padding: 0 3rem;
+    }
+    .logoim {
+        height: 6rem;
+    }
+    .nav-icon {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 3rem;
+        transform: translateY(-50%);
+        width: 3.5rem;
+        height: 2.5rem;
+        z-index: 200;
+    }
+    .nav-icon-line {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .nav-icon-line::before,
+    .nav-icon-line::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s;
+    }
+    .nav-icon-line::before {
+        top: -10px;
+    }
+    .nav-icon-line::after {
+        top: 10px;
+    }
+    .nav-header {
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        background-color: rgba(148, 77, 77, 0.95);
+        z-index: 100;
+        transition: height 0.3s ease-in-out;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 0;
+    }
+    .nav-links li {
+        margin-bottom: 2rem;
+    }
+    .list {
+        font-size: 2.5rem;
+        color: white;
+    }
+    .command-bouton:link,
+    .command-bouton:visited {
+        background-color: white;
+        color: black;
+    }
+    
+    /* CORRECTION : Comportement de la croix */
+    #nav-toggle:checked ~ .nav-header {
+        height: 50vh;
+        min-height: 40rem;
+    }
+    #nav-toggle:checked ~ .nav-icon .nav-icon-line {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+    #nav-toggle:checked ~ .nav-icon .nav-icon-line::before {
+        opacity: 0;
+        top: 0;
+    }
+    #nav-toggle:checked ~ .nav-icon .nav-icon-line::after {
+        transform: rotate(-90deg);
+        top: 0;
+    }
+
+    /* ------------------------------------- */
+    /* 05. SECTION COMMENT ÇA MARCHE         */
+    /* ------------------------------------- */
+    .grid--2 {
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
+    /* Inversion de l'ordre pour mobile */
+    .grid--2 > .img-etapes:nth-child(2) {
+        order: 2;
+    }
+    .grid--2 > .texte-etapes:nth-child(4) {
+        order: 3;
+    }
+    .grid--2 > .img-etapes:nth-child(3) {
+        order: 4;
+    }
+    .grid--2 > .texte-etapes:nth-child(5) {
+        order: 5;
+    }
+    .grid--2 > .img-etapes:nth-child(6) {
+        order: 6;
+    }
+    .img-etapes {
+        text-align: center;
+    }
+    .sous-titre-etapes {
+        font-size: 2.5rem;
+    }
+    .numero {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .apps {
+        width: 75%;
+    }
+    .numero {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .texte-etapes {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* ------------------------------------- */
+    /* 06. SECTION NOS REPAS (MENUS)         */
+    /* ------------------------------------- */
+
+    .menus {
+        grid-template-columns: 1fr;
+        row-gap: 5rem;
+    }
+    
+    /* CORRECTION 1 : Rendre l'image du menu flexible (débordement) */
+    .img-menu {
+        width: 100%;
+        height: auto; 
+        object-fit: cover; 
+    }
+
+    .menu1, .menu2 {
+        text-align: center;
+        /* CORRECTION 2 : Ajouter du padding en bas (resserrement) */
+        padding-bottom: 3rem; 
+    }
+
+    .titre-menu, .sous-titre-menu, .info-menu {
+        margin-left: 0;
+    }
+
+    .info-menu {
+        align-items: center;
+    }
+
+    /* ------------------------------------- */
+    /* 07. SECTION NOS FORMULES (PRICING)    */
+    /* ------------------------------------- */
+
+    .pricing {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        max-width: 100%;
+    }
+
+    .les-prix {
+        padding: 5rem 2rem;
+        text-align: center;
+    }
+    
+    .liste-inclus {
+        /* CORRECTION : Permet à la liste d'être DROITE et centrée */
+        width: fit-content; 
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+
+    .flex-ligne {
+        /* CORRECTION : Aligner l'icône et le texte à gauche (droite) */
+        justify-content: flex-start;
+    }
+
+    /* ------------------------------------- */
+    /* 08. SECTION COMMANDER (FORMULAIRE)    */
+    /* ------------------------------------- */
+
+    .form-div {
+        grid-template-columns: 1fr;
+        height: auto;
+        row-gap: 3rem;
+        padding-bottom: 2rem; /* S'assurer d'un peu d'espace en bas du formulaire */
+    }
+
+    .formulaire {
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+    }
+
+    .input, #select, .bouton-form {
+        width: 100%;
+    }
+    
+    /* CORRECTION : Masquer l'image du formulaire sur mobile */
+    .img-commande {
+        display: none; 
+    }
+
+    /* ------------------------------------- */
+    /* 09. FOOTER                            */
+    /* ------------------------------------- */
+
+    .footer-grille {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 5rem;
+    }
+
+    .col-logo {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .adresse-p {
+        margin-top: 1rem;
+    }
+}
+
+/* ======================================= */
+/*     11. MEDIA QUERY (SMARTPHONES <= 550px)    */
+/* ======================================= */
+
+@media (max-width: 550px) {
+    /* ------------------------------------- */
+    /* 00. STRUCTURE DE BASE ET TYPOGRAPHIE  */
+    /* ------------------------------------- */
+    html {
+        font-size: 50%;
+    }
+    .conteneur {
+        padding: 0 2rem;
+    }
+
+    /* ------------------------------------- */
+    /* 01. HEADER ET NAVIGATION              */
+    /* ------------------------------------- */
+    .header {
+        padding: 0 2rem;
+    }
+    .logoim {
+        height: 5rem;
+    }
+    .nav-icon {
+        right: 2rem;
+        width: 3rem;
+        height: 2rem;
+    }
+    .nav-icon-line::before {
+        top: -8px;
+    }
+    .nav-icon-line::after {
+        top: 8px;
+    }
+    .nav-links li {
+        margin-bottom: 1.5rem;
+    }
+    .list {
+        font-size: 2rem;
+    }
+
+    /* ------------------------------------- */
+    /* 03. SECTION HERO (HÉROS)              */
+    /* ------------------------------------- */
+
+    .hero-titre {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+    .hero-paragraphe {
+        margin-bottom: 5rem;
+    }
+    .hero-bouton {
+        display: block;
+        width: 90%;
+        margin: 1rem auto;
+        text-align: center;
+    }
+    .hero-texte .hero-bouton:first-of-type {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .livraison-section {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    .livraison-texte {
+        text-align: center;
+    }
+
+    /* ------------------------------------- */
+    /* 04. SECTION PARTENAIRES               */
+    /* ------------------------------------- */
+
+    .partenaires-img {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .partenaire-img {
+        height: 3rem;
+    }
+
+    /* ------------------------------------- */
+    /* 05. SECTION COMMENT ÇA MARCHE         */
+    /* ------------------------------------- */
+
+    .sous-titre {
+        font-size: 2.5rem;
+    }
+    .numero {
+        font-size: 6rem;
+    }
+    .apps {
+        width: 80%;
+    }
+
+    /* ------------------------------------- */
+    /* 07. SECTION NOS FORMULES (PRICING)    */
+    /* ------------------------------------- */
+
+    .les-prix {
+        padding: 4rem 1.5rem;
+    }
+    .prix {
+        font-size: 4rem;
+    }
+    
+    /* Conserver l'alignement droit de la liste */
+    .liste-inclus {
+        width: fit-content; 
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+    .flex-ligne {
+        justify-content: flex-start;
+    }
+
+    /* ------------------------------------- */
+    /* 09. FOOTER                            */
+    /* ------------------------------------- */
+
+    .footer-grille {
+        grid-template-columns: 1fr;
+    }
+    .col-contacts,
+    .col-comptes,
+    .col-companie,
+    .col-annexes {
+        text-align: center;
+    }
+    .nav-elements ul {
+        align-items: center;
+    }
+    .adresse-p,
+    .ad-links,
+    .nav-elements a {
+        display: inline-block;
+    }
+}
