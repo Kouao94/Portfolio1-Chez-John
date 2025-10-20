@@ -3,7 +3,7 @@
 
 ## 💡 Description du Projet
 
-Ce dépôt contient le code source de **"Chez John"**, mon tout premier site web. Il s'agit d'une page de présentation de type portfolio ou site d'entreprise fictif, conçue pour démontrer mes compétences initiales en développement web.
+Ce dépôt contient le code source de **"Chez John"**, mon tout premier site web. Il s'agit d'une page de présentation de type portfolio d'une entreprise proposant la vente de repas. Il est fictif et conçue pour démontrer mes compétences initiales en développement web.
 
 ---
 
