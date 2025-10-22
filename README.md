@@ -1,5 +1,4 @@
 # Portfolio1-Chez-John
-# Portfolio 1 : Chez John
 
 ## 💡 Description du Projet
 
